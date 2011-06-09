@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="F:\Sony\DotNetTracers\WinForms\DDD.SalesTaxProblem\SalesTaxTest.nunit" total="1" errors="0" failures="1" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2011-06-08" time="16:11:28">
+  <environment nunit-version="2.5.10.11092" clr-version="2.0.50727.4952" os-version="Microsoft Windows NT 6.1.7600.0" platform="Win32NT" cwd="C:\Program Files\NUnit 2.5.10\bin\net-2.0" machine-name="PROLAPE00700" user="sarouje" user-domain="SYMPHONYSV" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite type="Project" name="F:\Sony\DotNetTracers\WinForms\DDD.SalesTaxProblem\SalesTaxTest.nunit" executed="True" result="Failure" success="False" time="0.005" asserts="0">
+    <results>
+      <test-suite type="Assembly" name="F:\Sony\DotNetTracers\WinForms\DDD.SalesTaxProblem\NUnit.DomainTest\bin\Debug\DDD.DomainTest.dll" executed="True" result="Failure" success="False" time="0.004" asserts="0">
+        <results>
+          <test-suite type="Namespace" name="DDD" executed="True" result="Failure" success="False" time="0.003" asserts="0">
+            <results>
+              <test-suite type="Namespace" name="DomainTest" executed="True" result="Failure" success="False" time="0.003" asserts="0">
+                <results>
+                  <test-suite type="TestFixture" name="TestOrder" executed="True" result="Failure" success="False" time="0.002" asserts="0">
+                    <results>
+                      <test-case name="DDD.DomainTest.TestOrder.CreateOrder" executed="True" result="Failure" success="False" time="0.001" asserts="2">
+                        <failure>
+                          <message><![CDATA[  Expected: 31
+  But was:  30.0d
+]]></message>
+                          <stack-trace><![CDATA[at DDD.DomainTest.TestOrder.CreateOrder() in F:\Sony\DotNetTracers\WinForms\DDD.SalesTaxProblem\NUnit.DomainTest\TestOrder.cs:line 28
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
