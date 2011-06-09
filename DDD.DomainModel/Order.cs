@@ -5,6 +5,7 @@ using System.Text;
 
 namespace DDD.DomainModel
 {
+    //test
     public class Order
     {
         private IList<OrderLine> _orderLines;
