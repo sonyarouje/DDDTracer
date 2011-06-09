@@ -8,7 +8,7 @@ namespace DDD.DomainModel
     public class Order
     {
         private IList<OrderLine> _orderLines;
-        //For persistance
+        //For persistance another test
         protected Order() { } 
         public Order(Customer customer)
         {
