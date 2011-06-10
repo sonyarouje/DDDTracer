@@ -5,16 +5,16 @@ using System.Text;
 
 namespace DDD.DomainModel
 {
-    public static class SalesTaxCalculator
+    public class SalesTaxCalculator : ISalesTaxCalculator
     {
-        static AbstractSalesTaxRules _salesTax;
-        private static void CreateTaxInstance()
+        private AbstractSalesTaxRules _salesTax;
+        private void CreateTaxInstance()
         {
             ImportedItemsRule importTax = new ImportedItemsRule(null);
             TaxableItemRule taxable = new TaxableItemRule(importTax);
             _salesTax = new NonTaxableRule(taxable);
         }
-        public static Money GetTaxAmount(OrderLine orderLine)
+        public Money CalculateTax(OrderLine orderLine)
         {
             if (_salesTax == null)
                 CreateTaxInstance();

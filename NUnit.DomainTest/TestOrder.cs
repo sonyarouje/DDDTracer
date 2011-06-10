@@ -27,7 +27,8 @@ namespace DDD.DomainTest
         [Test]
         public void CreateOrder()
         {
-            Order order = new Order(new Customer(1, "sony", "blr"));
+            ISalesTaxCalculator salesCalculator = new SalesTaxCalculator();
+            Order order = new Order(new Customer(1, "sony", "blr"), salesCalculator);
             Assert.AreNotEqual(order, null, "Order created successfully");
             order.With(new OrderLine(_productCatalogs[0],1))
                 .With(new OrderLine(_productCatalogs[1],1));

@@ -8,16 +8,18 @@ namespace DDD.DomainModel
     public class Order
     {
         private IList<OrderLine> _orderLines;
+        private ISalesTaxCalculator _salesCalculator;
         //For persistance another test
         protected Order() { } 
-        public Order(Customer customer)
+        public Order(Customer customer, ISalesTaxCalculator salesCalculator)
         {
             this._orderLines = new List<OrderLine>();
+            this._salesCalculator = salesCalculator;
         }
 
         public Order With(OrderLine orderLine)
         {
-            Money tax = SalesTaxCalculator.GetTaxAmount(orderLine);
+            Money tax = _salesCalculator.CalculateTax(orderLine);
             orderLine.SetTaxAmount(tax);
             _orderLines.Add(orderLine);
             return this;
