@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping default-access="field"
+    xmlns="urn:nhibernate-mapping-2.2"
+    auto-import="true">
+  <class name="DDD.DomainModel.Customer,DDD.DomainModel" lazy="false" table="Customer">
+    <id name="CustomerId" column="customer_id" access="nosetter.camelcase-underscore">
+      <generator class="native"></generator>
+    </id>
+    <bag
+      name="Orders"
+      cascade="all-delete-orphan"
+      inverse="true"
+      access="nosetter.camelcase-underscore" lazy="true">
+      <key column ="customer_id"/>
+      <one-to-many class ="DDD.DomainModel.Order,DDD.DomainModel"/>
+    </bag>
+    <property name="_name" column="name" not-null="true" access="field"/>
+  </class>
+</hibernate-mapping>

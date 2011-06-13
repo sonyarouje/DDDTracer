@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping default-access="field"
+    xmlns="urn:nhibernate-mapping-2.2"
+    auto-import="true">
+  <class name="DDD.DomainModel.OrderLine,DDD.DomainModel" lazy="false" table="OrderLine">
+    <id name="OrderLineId" column="orderline_id" access="nosetter.camelcase-underscore">
+      <generator class="native"></generator>
+    </id>
+    <property name="_quantity" column="quantity" not-null="true" access="field"/>
+    <many-to-one name="_product" class="DDD.DomainModel.ProductCatalog,DDD.DomainModel" access="field" column="product_id"/>
+    <many-to-one name="_order" class="DDD.DomainModel.Order,DDD.DomainModel" access="field" column="order_id"/>
+    <component
+      name="_taxAmt"
+      class="DDD.DomainModel.Money,DDD.DomainModel" access="field">
+      <property
+        name="_value"
+        column="tax_amt" access="field"/>
+    </component>
+  </class>
+</hibernate-mapping>

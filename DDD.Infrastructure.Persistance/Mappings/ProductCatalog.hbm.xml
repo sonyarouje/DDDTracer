@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping default-access="field"
+    xmlns="urn:nhibernate-mapping-2.2"
+    auto-import="true">
+  <class name="DDD.DomainModel.ProductCatalog,DDD.DomainModel" lazy="false" table="ProductCatalog">
+    <id name="ProductId" column="product_id" access="nosetter.camelcase-underscore">
+      <generator class="native"></generator>
+    </id>
+    <component
+      name="_price" class="DDD.DomainModel.Money,DDD.DomainModel" access="field">
+      <property name="_value" column="price" access="field"/>
+    </component>
+    <property name="_isTaxable" column="isTaxable" not-null="true" access="field"/>
+    <property name="_isImported" column="isImported" not-null="true" access="field"/>
+    <property name="_productName" column="name" not-null="true" access="field"/>
+  </class>
+</hibernate-mapping>
