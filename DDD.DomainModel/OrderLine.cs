@@ -10,10 +10,21 @@ namespace DDD.DomainModel
         private ProductCatalog _product=null;
         private double _quantity=0;
         private Money _taxAmt = Money.Empty();
+        private int _orderLineId;
+        private Order _order;
+        public OrderLine(){}
         public OrderLine(ProductCatalog product, double quantity)
         {
             this._product = product;
             this._quantity = quantity;
+        }
+        public int OrderLineId
+        {
+            get { return _orderLineId; }
+        }
+        internal void SetOrder(Order order)
+        {
+            _order = order;
         }
         public double GetQuantity()
         {

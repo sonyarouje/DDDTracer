@@ -7,19 +7,21 @@ namespace DDD.DomainModel
 {
     public class Customer
     {
-        private int _id;
+        private int _customerId;
         private string _name;
-        private string _addres;
-        public Customer(int id, string name, string address)
+        private string _address;
+        private IList<Order> _orders;
+
+        public Customer (){}
+        public Customer(string name, string address)
         {
-            this._id = id;
             this._name = name;
-            this._addres = address;
+            this._address = address;
         }
 
-        public int GetId()
+        public int CustomerId
         {
-            return this._id;
+            get { return this._customerId; }
         }
         public string GetName()
         {
@@ -27,7 +29,12 @@ namespace DDD.DomainModel
         }
         public string GetAddress()
         {
-            return this._addres;
+            return this._address;
+        }
+
+        public virtual IList<Order> Orders
+        {
+            get { return _orders; }
         }
     }
 }
