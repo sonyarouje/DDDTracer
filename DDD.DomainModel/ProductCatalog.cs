@@ -11,6 +11,8 @@ namespace DDD.DomainModel
         private Money _price;
         private bool _isTaxable;
         private bool _isImported;
+        private int _productId;
+        public ProductCatalog(){}
         public ProductCatalog(string productName, Money price, bool isTaxable, bool isImported)
         {
             this._productName = productName;
@@ -21,6 +23,10 @@ namespace DDD.DomainModel
         public Money GetPrice()
         {
             return _price;
+        }
+        public int ProductId
+        {
+            get { return _productId; }
         }
         public bool IsTaxable()
         {

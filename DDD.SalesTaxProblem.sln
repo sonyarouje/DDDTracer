@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDD.DomainModel", "DDD.Doma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDD.DomainTest", "NUnit.DomainTest\DDD.DomainTest.csproj", "{404A15C8-3257-462E-966A-E172DFC97426}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDD.Infrastructure.Persistance", "DDD.Infrastructure.Persistance\DDD.Infrastructure.Persistance.csproj", "{2CD496AF-6915-4157-8CC4-4E3B2C50AA26}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,16 @@ Global
 		{404A15C8-3257-462E-966A-E172DFC97426}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{404A15C8-3257-462E-966A-E172DFC97426}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{404A15C8-3257-462E-966A-E172DFC97426}.Release|x86.ActiveCfg = Release|Any CPU
+		{2CD496AF-6915-4157-8CC4-4E3B2C50AA26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CD496AF-6915-4157-8CC4-4E3B2C50AA26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CD496AF-6915-4157-8CC4-4E3B2C50AA26}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{2CD496AF-6915-4157-8CC4-4E3B2C50AA26}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{2CD496AF-6915-4157-8CC4-4E3B2C50AA26}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2CD496AF-6915-4157-8CC4-4E3B2C50AA26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CD496AF-6915-4157-8CC4-4E3B2C50AA26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CD496AF-6915-4157-8CC4-4E3B2C50AA26}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{2CD496AF-6915-4157-8CC4-4E3B2C50AA26}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{2CD496AF-6915-4157-8CC4-4E3B2C50AA26}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

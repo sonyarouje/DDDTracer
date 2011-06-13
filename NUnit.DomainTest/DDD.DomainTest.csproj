@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NHibernate.ByteCode.Castle">
+      <HintPath>..\Lib\NHibernate.ByteCode.Castle.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.core">
       <HintPath>C:\Program Files\NUnit 2.5.10\bin\net-2.0\lib\nunit.core.dll</HintPath>
     </Reference>
@@ -54,6 +57,10 @@
     <ProjectReference Include="..\DDD.DomainModel\DDD.DomainModel.csproj">
       <Project>{EC85EF88-77DD-4B50-AAAE-397D4845C45E}</Project>
       <Name>DDD.DomainModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DDD.Infrastructure.Persistance\DDD.Infrastructure.Persistance.csproj">
+      <Project>{2CD496AF-6915-4157-8CC4-4E3B2C50AA26}</Project>
+      <Name>DDD.Infrastructure.Persistance</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
