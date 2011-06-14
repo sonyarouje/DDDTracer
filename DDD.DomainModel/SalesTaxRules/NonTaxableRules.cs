@@ -5,17 +5,16 @@ using System.Text;
 
 namespace DDD.DomainModel
 {
-    public class NonTaxableRule:AbstractSalesTaxRules
+    public class NonTaxableRule:ISalesTaxRules
     {
-        AbstractSalesTaxRules _nextTaxRule;
-        public NonTaxableRule(AbstractSalesTaxRules nextTax)
+        ISalesTaxRules _nextTaxRule;
+        public NonTaxableRule(ISalesTaxRules nextTax)
         {
             _nextTaxRule = nextTax;
         }
-        public override Money GetTax(OrderLine orderLine)
+        public Money GetTax(OrderLine orderLine)
         {
             Money tax = Money.Empty();
-            tax= base.GetTax(orderLine);
             if (_nextTaxRule != null)
                 tax += _nextTaxRule.GetTax(orderLine);
 

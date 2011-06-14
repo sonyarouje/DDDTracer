@@ -12,11 +12,17 @@ namespace DDD.DomainModel
         private Money _taxAmt = Money.Empty();
         private int _orderLineId;
         private Order _order;
+        private TaxSpecification _taxSpecification;
         public OrderLine(){}
         public OrderLine(ProductCatalog product, double quantity)
         {
             this._product = product;
             this._quantity = quantity;
+            this._taxSpecification = new TaxSpecification(this);
+        }
+        public TaxSpecification TaxSpecification
+        {
+            get { return _taxSpecification; }
         }
         public int OrderLineId
         {
@@ -50,14 +56,6 @@ namespace DDD.DomainModel
         public Money GetTaxAmount()
         {
             return _taxAmt;
-        }
-        public bool IsTaxable()
-        {
-            return _product.IsTaxable();
-        }
-        public bool IsImported()
-        {
-            return _product.IsImported();
         }
     }
 }

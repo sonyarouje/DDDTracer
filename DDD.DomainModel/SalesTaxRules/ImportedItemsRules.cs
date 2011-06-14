@@ -5,18 +5,18 @@ using System.Text;
 
 namespace DDD.DomainModel
 {
-    public class ImportedItemsRule:AbstractSalesTaxRules
+    public class ImportedItemsRule:ISalesTaxRules
     {
-        public AbstractSalesTaxRules _nextTaxRule;
+        public ISalesTaxRules _nextTaxRule;
         
-        public ImportedItemsRule(AbstractSalesTaxRules nextTax)
+        public ImportedItemsRule(ISalesTaxRules nextTax)
         {
             _nextTaxRule = nextTax;
         }
-        public override Money GetTax(OrderLine orderLine)
+        public Money GetTax(OrderLine orderLine)
         {
             Money tax = Money.Empty();
-            if (orderLine.IsImported())
+            if (orderLine.TaxSpecification.IsImported())
                 tax = new Money((orderLine.GetCost().Value * 5) / 100);
 
             if (_nextTaxRule != null)

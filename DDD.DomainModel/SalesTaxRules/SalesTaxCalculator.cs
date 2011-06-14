@@ -7,7 +7,7 @@ namespace DDD.DomainModel
 {
     public class SalesTaxCalculator : ISalesTaxCalculator
     {
-        private AbstractSalesTaxRules _salesTax;
+        private ISalesTaxRules _salesTax;
         private void CreateTaxInstance()
         {
             ImportedItemsRule importTax = new ImportedItemsRule(null);

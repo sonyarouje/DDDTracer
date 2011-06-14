@@ -46,12 +46,13 @@
     <Compile Include="OrderLine.cs" />
     <Compile Include="ProductCatalog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SalesTaxRules\AbstractSalesTaxRules.cs" />
+    <Compile Include="SalesTaxRules\ISalesTaxRules.cs" />
     <Compile Include="SalesTaxRules\ISalesTaxCalculator.cs" />
     <Compile Include="SalesTaxRules\SalesTaxCalculator.cs" />
     <Compile Include="SalesTaxRules\ImportedItemsRules.cs" />
     <Compile Include="SalesTaxRules\NonTaxableRules.cs" />
     <Compile Include="SalesTaxRules\TaxableItemsRules.cs" />
+    <Compile Include="TaxSpecification.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
